@@ -1,7 +1,15 @@
 import sys
-from enum import Enum
-
+from enum import Enumچ
 import numpy as np
+import os
+
+SECRET_KEY = os.getenv('SECRET_KEY', 'default-secret-key')
+
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+
+
 
 
 # Exit status.
